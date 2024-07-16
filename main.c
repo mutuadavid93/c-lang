@@ -2,17 +2,21 @@
 #include <stdio.h>
 
 // custom header files are imported via a path
-#include "functions.h"
+#include "functions-decorations.h"
 
 int main()
 {
     // C uses character arrays to represent strings.
     char name[] = "World!";
 
-    printf("Hello %s\n", getName(name));
-}
+    uint8_t num1 = 7;
+    uint8_t num2 = 13;
 
-// function definition => function implementation
-char* getName(char name[]) {
-    return name;
+    char* fiftycharvalues[50];
+    fiftycharvalues[0] = "Anorld";
+
+    printf("Hello %s, %s\n\n", getName(name), fiftycharvalues[0]);
+
+    // `%u` for printing an unsigned integer
+    printf("%u\n", getSum(num1, num2));
 }
