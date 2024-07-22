@@ -77,6 +77,15 @@ void demoPointers()
     int numb = 2323;
     int *numberptr = &numb;
 
+    // void pointer is a memory address which is generic and can hold any type of value
+    // but we can always cast the pointer to a specific type
+    int *address = (int *)malloc(sizeof(int));
+
     printf("address: %p\n", (void *)numberptr);
     printf("value: %d\n", *numberptr);
+
+    address[0] = 6747743;
+    printf("malloced_address: %p -> %d\n", address, address[0]);
+
+    free(address);
 }
